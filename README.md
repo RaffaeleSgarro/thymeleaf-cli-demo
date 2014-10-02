@@ -1,4 +1,4 @@
-Thymeleaf demo with command line application. To run, launch demo.App either from
+Thymeleaf demo with command line application. To run, launch `demo.App` either from
 your preferred IDE of with
 
     .\gradlew run
