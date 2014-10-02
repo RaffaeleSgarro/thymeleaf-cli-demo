@@ -1,0 +1,15 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Demo bill</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <h1 th:text="${order.name}">Order 123456</h1>
+    <ol th:unless="${order.lines.isEmpty()}" th:each="line : ${order.lines}" th:object="${line}">
+        <li><span th:text="*{product.name}">Something</span><span th:text="*{price}">1.00$</span></li>
+    </ol>
+  <div th:text="'Grand total is ' + ${order.total}">Order total is $1,0000,000</div>
+  </body>
+</html>
